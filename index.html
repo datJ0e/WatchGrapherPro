@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' http://* 'unsafe-inline'; script-src 'self' http://* 'unsafe-inline'" />
+    <meta http-equiv="X-Content-Security-Policy" content="default-src *; style-src 'self' http://* 'unsafe-inline'; script-src 'self' http://* 'unsafe-inline'">
+    <title>WatchGrapherPro</title>
+    <link rel="stylesheet" href="./styles.css"></link>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+  </head>
+  <body>
+    <div class="chart-container">
+      <canvas id="chart"></canvas>
+    </div>
+    <div id="allDataList" style="display:none;"></div>
+    <div id="fileDropZone" ondrop="dropHandler(event);" ondragover="dragOverHandler(event);" ondragenter="dragEnter()" ondragleave="dragLeave()">
+      # Drop the exported .txt file here #
+    </div>
+    <!-- You can also require other files to run in this process -->
+    <script src="./renderer.js"></script>
+    <script src="./model.js"></script>
+  </body>
+</html>

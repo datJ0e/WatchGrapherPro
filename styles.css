@@ -1,0 +1,39 @@
+.chart-container{
+    width: 80vw;
+    height: 80vh;
+    margin:auto;
+    border: 1px solid black;
+}
+
+#fileDropZone{
+    width: 50vw;
+    height: 10vh;
+    margin:auto;
+    border: 1px solid red;
+    text-align: center;
+    line-height: 10vh;
+}
+#fileDropZone.over{
+    background-color: rgba(122,0,244, 0.5);
+}
+#fileDropZone.dropped{
+    width:min-content;
+    height:10vh;
+    background-color: rgba(113, 189, 0, 0.6);
+}
+
+#allDataList{
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    width:min-content;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+#allDataList > div {
+    display: inline;
+    width:max-content;
+}
